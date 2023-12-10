@@ -17,21 +17,24 @@
   <header class="main-header">
     <a class="main-header__logo" href="#">
       <picture>
-        <source media="(min-width: 1200px)" srcset="images/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38"
+        <source media="(min-width: 1200px)" type="image/png" width="33" height="38"
+          srcset="images/icons/logo-desktop.svg">
+        <source media="(min-width: 768px)" type="image/png" width="33" height="38"
+          srcset="images/icons/logo-tablet.svg">
+        <img class="main-header__logo-image" src="images/icons/logo-mobile.svg" width="33" height="38"
           alt="Логотип кот Cate energy.">
       </picture>
     </a>
     <a class="main-header__logo logo-title" href="#">
-      <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
+        alt="Логотип Cate energy.">
     </a>
     <nav class="main-header__navigation main-nav">
       <button class="main-nav__toggle main-nav__toggle--active" type="button"><span class="visually-hidden">Открыть
           меню</span></button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" href="#">Главная</a>
+          <a class="main-nav__link" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -104,9 +107,26 @@
         </div>
       </dl>
       <p class="living-example__expenses">Затраты на питание: 15 000 руб.</p>
-      <div class="living-example__slider">
-        <div class="living-example__slider-item">
-          <img src="images/cat-slider-mobile.png" width="280" height="256" alt="Кот, до приема корма Cat energy.">
+      <div class="living-example__slider slider-cat">
+        <input class="slider-cat__input" type="range" name="cat" min="0" max="100">
+        <div class="slider-cat__button"></div>
+        <div class="slider-cat__item slider-cat__item--slim-cat">
+          <picture>
+            <source media="(min-width: 768px)" type="image/png"
+              srcset="images/slider/desktop-cat-slim@1x.png, images/slider/desktop-cat-slim@2x.png" width="280"
+              height="256">
+            <img src="images/slider/mobile-cat-slim@1x.png" srcset="images/slider/mobile-cat-slim@2x.png" width="280"
+              height="256" alt="Кот, до приема корма Cat energy.">
+          </picture>
+        </div>
+        <div class="slider-cat__item slider-cat__item--fat-cat">
+          <picture>
+            <source media="(min-width: 768px)" type="image/png"
+              srcset="images/slider/desktop-cat-fat@1x.png , images/slider/desktop-cat-fat@2x.png" width="280"
+              height="256">
+            <img src="images/slider/mobile-cat-fat@1x.png" srcset="images/slider/mobile-cat-fat@2x.png" width="280"
+              height="256" alt="Кот, после приема корма Cat energy.">
+          </picture>
         </div>
       </div>
     </section>
@@ -151,6 +171,17 @@
       <img src="images/icons/icon-html-academy.svg" width="27" height="34" alt="html-academy">
     </div>
   </footer>
+
+  <script>
+    let catInput = document.querySelector('.slider-cat__input');
+    let fatCat = document.querySelector('.slider-cat__item--fat-cat');
+    let sliderButton = document.querySelector('.slider-cat__button');
+    catInput.oninput = function (e) {
+      const sliderPos = e.target.value;
+      fatCat.style.width = sliderPos + '%';
+      sliderButton.style.left = sliderPos + '%'
+    }
+  </script>
 
 </body>
 
