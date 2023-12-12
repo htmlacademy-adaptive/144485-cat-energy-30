@@ -1,93 +1,33 @@
 /* GLOBAL */
-@import "./global/variables.scss";
-@import "./global/global.scss";
 @import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/common.scss";
+@import "./global/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
-
-
-
-.slider-cat {
-  position: relative;
-  height: 256px;
-  width: 280px;
-}
-
-.slider-cat__input {
-  position: absolute;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(#f2f2f2, .3);
-  outline: none;
-  margin: 0;
-  z-index: 2;
-
-  &:hover {
-    background: rgba(#f2f2f2, .1);
-  }
-
-  &::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 6px;
-    height: 280px;
-    background: white;
-    cursor: pointer;
-  }
-
-  &::-moz-range-thumb {
-    width: 6px;
-    height: 280px;
-    background: white;
-    cursor: pointer;
-  }
-}
-
-.slider-cat__item {
-  position: absolute;
-
-}
-
-.slider-cat__item--fat-cat {
-  width: 50%;
-  overflow: hidden;
-  z-index: 1;
-  background-color: #ffffff;
-}
-
-.slider-cat__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 3;
-
-  @mixin arrow-helper() {
-    content: '';
-    padding: 3px;
-    display: inline-block;
-    border: solid #5D5D5D;
-    border-width: 0 2px 2px 0;
-  }
-
-  &:after {
-    @include arrow-helper();
-    transform: rotate(-45deg);
-  }
-
-  &:before {
-    @include arrow-helper();
-    transform: rotate(135deg);
-  }
-}
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/logo-title.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main.scss";
+@import "./blocks/main-catalog.scss";
+@import "./blocks/main-form.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/how-works.scss";
+@import "./blocks/living-example.scss";
+@import "./blocks/slider-cat.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/additional-products.scss";
+@import "./blocks/gift-information.scss";
+@import "./blocks/form.scss";
+@import "./blocks/form-list.scss";
+@import "./blocks/list-input.scss";
+@import "./blocks/list-radio.scss";
+@import "./blocks/contact-info.scss";
+@import "./blocks/form-comments.scss";
+@import "./blocks/list-checkbox.scss";

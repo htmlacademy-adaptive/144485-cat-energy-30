@@ -17,9 +17,9 @@
   <header class="main-header">
     <a class="main-header__logo" href="#">
       <picture>
-        <source media="(min-width: 1200px)" type="image/png" width="33" height="38"
+        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38"
           srcset="images/icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" type="image/png" width="33" height="38"
+        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38"
           srcset="images/icons/logo-tablet.svg">
         <img class="main-header__logo-image" src="images/icons/logo-mobile.svg" width="33" height="38"
           alt="Логотип кот Cate energy.">
@@ -172,15 +172,16 @@
     </div>
   </footer>
 
+
   <script>
-    let catInput = document.querySelector('.slider-cat__input');
-    let fatCat = document.querySelector('.slider-cat__item--fat-cat');
-    let sliderButton = document.querySelector('.slider-cat__button');
-    catInput.oninput = function (e) {
+    const inputRange = document.querySelector('.slider-cat__input');
+    const fatCat = document.querySelector('.slider-cat__item--fat-cat');
+    const sliderButton = document.querySelector('.slider-cat__button');
+    inputRange.oninput = function (e) {
       const sliderPos = e.target.value;
       fatCat.style.width = sliderPos + '%';
-      sliderButton.style.left = sliderPos + '%'
-    }
+      sliderButton.style.left = sliderPos + '%';
+    };
   </script>
 
 </body>

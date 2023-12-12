@@ -13,8 +13,10 @@
   <header class="main-header">
     <a class="main-header__logo" href="#">
       <picture>
-        <source media="(min-width: 1200px)" type="image/png" srcset="images/icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" type="image/png" srcset="images/icons/logo-tablet.svg">
+        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38"
+          srcset="images/icons/logo-desktop.svg">
+        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38"
+          srcset="images/icons/logo-tablet.svg">
         <img class="main-header__logo-image" src="images/icons/logo-mobile.svg" width="33" height="38"
           alt="Логотип кот Cate energy.">
       </picture>
@@ -218,12 +220,12 @@
           </dl>
           <a class="card__button button button--main" href="#">Заказать</a>
         </li>
+        <li class="catalog__item card card--card-more">
+          <p class="card-more__title">Показать еще 100500 товаров</p>
+          <p class="card-more__description">На самом деле вкусов гораздо больше!</p>
+          <button class="card__button button button--see-more" type="button">Показать все</button>
+        </li>
       </ul>
-      <div class="catalog__card-more card-more">
-        <p class="card-more__title">Показать еще 100500 товаров</p>
-        <p class="card-more__description">На самом деле вкусов гораздо больше!</p>
-        <button class="card-more__button button button--see-more">Показать все</button>
-      </div>
     </section>
     <section class="additional-products">
       <h2 class="additional-products__title">Дополнительные товары</h2>
