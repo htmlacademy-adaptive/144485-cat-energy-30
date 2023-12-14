@@ -1,0 +1,23 @@
+.button {
+  font-family: $secondary-font;
+  color: #FFF;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 14px 10px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--main {
+    background-color: $bg-color-green;
+  }
+
+  &--info {
+    color: #000;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0;
+  }
+}

@@ -14,7 +14,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header container-page">
     <a class="main-header__logo" href="#">
       <picture>
         <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38"
@@ -33,8 +33,8 @@
       <button class="main-nav__toggle main-nav__toggle--active" type="button"><span class="visually-hidden">Открыть
           меню</span></button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" href="index.html">Главная</a>
+        <li class="main-nav__item ">
+          <a class="main-nav__link main-nav__link-current" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -58,13 +58,13 @@
           <h3 class="programs__title">Похудение</h3>
           <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="programs__button" href="#">Каталог slim</a>
+          <a class="programs__button button button--info" href="#">Каталог slim</a>
         </li>
         <li class="programs__item programs__item--pro">
           <h3 class="programs__title">Набор массы</h3>
           <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="programs__button" href="#">Каталог pro</a>
+          <a class="programs__button button button--info" href="#">Каталог pro</a>
         </li>
       </ul>
     </section>
@@ -136,7 +136,7 @@
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <div class="contacts__map">
         <span class="contacts__point"></span>
-        <img class="contacts__map-image" src="images/map-mobile.png" width="320" height="362"
+        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362"
           alt="Карта города с указанием точного местоположения.">
       </div>
     </section>
@@ -167,7 +167,7 @@
       </li>
     </ul>
     <div class="main-footer__logo-htmlacademy logo-htmlacademy">
-      <span class="logo-htmlacademy-title">HTML Academy</span>
+      <span class="logo-htmlacademy__title">HTML Academy</span>
       <img src="images/icons/icon-html-academy.svg" width="27" height="34" alt="html-academy">
     </div>
   </footer>
