@@ -1,12 +1,6 @@
-.main-nav {}
-
-.main-nav__toggle {}
-
 .main-nav__list {
   @include list-style-none;
 }
-
-.main-nav__item {}
 
 .main-nav__link {
   color: #000;
@@ -17,4 +11,5 @@
   padding-left: 10px;
   padding-right: 10px;
   text-transform: uppercase;
+  text-decoration: none;
 }

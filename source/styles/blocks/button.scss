@@ -8,10 +8,18 @@
   text-transform: uppercase;
   padding: 14px 10px;
   text-decoration: none;
+  border: none;
+  box-sizing: border-box;
   cursor: pointer;
 
   &--main {
     background-color: $bg-color-green;
+  }
+
+  &--see-more {
+    color: $base-color-text;
+    background: #F2F2F2;
+    padding: 10px 10px;
   }
 
   &--info {

@@ -46,90 +46,90 @@
       <h1 class="main-form__heading">Подбор программы</h1>
       <p class="main-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-        <ul class="form__list list-input">
-          <li class="list-input__item">
-            <label class="list-input__label" for="name">Имя:<sup>*</sup></label>
-            <input class="list-input__input" type="text" name="name" id="name" value="барсик" placeholder="Имя">
+        <ul class="form__list form-list">
+          <li class="form-list__item">
+            <label class="form-list__label" for="name">Имя:<sup>*</sup></label>
+            <input class="form-list__input" type="text" name="name" id="name" value="барсик" placeholder="Имя">
           </li>
-          <li class="list-input__item">
-            <label class="list-input__label" for="weight">Вес (кг):</label>
-            <input class="list-input__input" type="text" name="weight" id="weight" value="7" placeholder="Вес">
+          <li class="form-list__item">
+            <label class="form-list__label" for="weight">Вес (кг):</label>
+            <input class="form-list__input" type="text" name="weight" id="weight" value="7" placeholder="Вес">
           </li>
-          <li class="list-input__item">
-            <label class="list-input__label" for="age">Возраст (лет):</label>
-            <input class="list-input__input" type="text" name="age" id="age" value="7" placeholder="Возраст">
+          <li class="form-list__item">
+            <label class="form-list__label" for="age">Возраст (лет):</label>
+            <input class="form-list__input" type="text" name="age" id="age" value="7" placeholder="Возраст">
           </li>
         </ul>
-        <ul class="form__list list-radio">
-          <li class="list-radio__item">
-            <label class="list-radio__label">
-              <input class="visually-hidden list-radio__input" type="radio" name="type-program" value="weight-loss"
+        <ul class="form__list form-list form-list--radio">
+          <li class="form-list__item">
+            <label class="form-list__label">
+              <input class="visually-hidden form-list__input" type="radio" name="type-program" value="weight-loss"
                 checked>
-              <span class="list-radio__custom"></span>
-              <span class="list-radio__text">Похудение</span>
+              <span class="form-list__custom"></span>
+              <span class="form-list__text">Похудение</span>
             </label>
           </li>
-          <li class="list-radio__item">
-            <label class="list-radio__label">
-              <input class="visually-hidden list-radio__input" type="radio" name="type-program" value="mass-gain">
-              <span class="list-radio__custom"></span>
-              <span class="list-radio__text">Набор массы</span>
+          <li class="form-list__item">
+            <label class="form-list__label">
+              <input class="visually-hidden form-list__input" type="radio" name="type-program" value="mass-gain">
+              <span class="form-list__custom"></span>
+              <span class="form-list__text">Набор массы</span>
             </label>
           </li>
-          <li class="list-radio__item">
-            <label class="list-radio__label">
-              <input class="visually-hidden list-radio__input" type="radio" name="type-program" value="need-advice">
-              <span class="list-radio__custom"></span>
-              <span class="list-radio__text">Не знаю (Нужен ваш совет)</span>
+          <li class="form-list__item">
+            <label class="form-list__label">
+              <input class="visually-hidden form-list__input" type="radio" name="type-program" value="need-advice">
+              <span class="form-list__custom"></span>
+              <span class="form-list__text">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
         </ul>
-        <div class="form__contact-info contact-info">
-          <h2 class="contact-info__title">Контактные данные (владельца кота)</h2>
-          <div class="contact-info__group">
-            <label class="contact-info__label" for="email">E-mail:<sup>*</sup></label>
-            <input class="contact-info__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
+        <div class="form__list form-list form-list--contact-info">
+          <h2 class="form__title">Контактные данные (владельца кота)</h2>
+          <div class="form-list__group">
+            <label class="form-list__label" for="email">E-mail:<sup>*</sup></label>
+            <input class="form-list__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
               required>
           </div>
-          <div class="contact-info__group">
-            <label class="contact-info__label" for="tel">Телефон:<sup>*</sup></label>
-            <input class="contact-info__input" type="tel" name="tel" id="tel" required>
+          <div class="form-list__group">
+            <label class="form-list__label" for="tel">Телефон:<sup>*</sup></label>
+            <input class="form-list__input" type="tel" name="tel" id="tel" required>
           </div>
         </div>
-        <div class="form__comments form-comments">
-          <h2 class="form-comments__title">Комментарий</h2>
-          <textarea class="form-comments__message" name="comments" id="message" cols="30" rows="10"
+        <div class="form__list form-list form-list--comments">
+          <h2 class="form__title">Комментарий</h2>
+          <textarea class="form-list__input" name="comments" id="message" cols="30" rows="10"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
-        <div class="form__checkbox">
-          <h2 class="form-title">Дополнительно</h2>
-          <ul class="form-list list-checkbox">
-            <li class="list-checkbox__item">
-              <label class="list-checkbox__label">
-                <input class="visually-hidden list-checkbox__input" type="checkbox" name="sweetener" checked>
-                <span class="list-checkbox__custom"></span>
-                <span class="list-checkbox__text">Cахарозаменитель</span>
+        <div class="form__add">
+          <h2 class="form__title">Дополнительно</h2>
+          <ul class="form__list form-list form-list--checkbox">
+            <li class="form-list__item">
+              <label class="form-list__label">
+                <input class="visually-hidden form-list__input" type="checkbox" name="sweetener" checked>
+                <span class="form-list__custom"></span>
+                <span class="form-list__text">Cахарозаменитель</span>
               </label>
             </li>
-            <li class="list-checkbox__item">
-              <label class="list-checkbox__label">
-                <input class="visually-hidden list-checkbox__input" type="checkbox" name="water">
-                <span class="list-checkbox__custom"></span>
-                <span class="list-checkbox__text">Питьевая вода</span>
+            <li class="form-list__item">
+              <label class="form-list__label">
+                <input class="visually-hidden form-list__input" type="checkbox" name="water">
+                <span class="form-list__custom"></span>
+                <span class="form-list__text">Питьевая вода</span>
               </label>
             </li>
-            <li class="list-checkbox__item">
-              <label class="list-checkbox__label">
-                <input class="visually-hidden list-checkbox__input" type="checkbox" name="milk">
-                <span class="list-checkbox__custom"></span>
-                <span class="list-checkbox__text">Молоко</span>
+            <li class="form-list__item">
+              <label class="form-list__label">
+                <input class="visually-hidden form-list__input" type="checkbox" name="milk">
+                <span class="form-list__custom"></span>
+                <span class="form-list__text">Молоко</span>
               </label>
             </li>
-            <li class="list-checkbox__item">
-              <label class="list-checkbox__label">
-                <input class="visually-hidden list-checkbox__input" type="checkbox" name="vitamins">
-                <span class="list-checkbox__custom"></span>
-                <span class="list-checkbox__text">Витамины</span>
+            <li class="form-list__item">
+              <label class="form-list__label">
+                <input class="visually-hidden form-list__input" type="checkbox" name="vitamins">
+                <span class="form-list__custom"></span>
+                <span class="form-list__text">Витамины</span>
               </label>
             </li>
           </ul>
@@ -138,11 +138,22 @@
         <p class="form__addition-information"><sup>*</sup> — Обязательные поля</p>
       </form>
     </section>
+    <section class="contacts">
+      <h2 class="visually-hidden">Контакты</h2>
+      <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <div class="contacts__map">
+        <span class="contacts__point"></span>
+        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362"
+          alt="Карта города с указанием точного местоположения.">
+      </div>
+    </section>
   </main>
 
   <footer class="main-footer">
     <div class="main-footer__logo logo-title">
-      <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
+        alt="Логотип Cate energy.">
     </div>
     <ul class="main-footer__social-list">
       <li class="main-footer__social-item">
@@ -165,7 +176,7 @@
       </li>
     </ul>
     <div class="main-footer__logo-htmlacademy logo-htmlacademy">
-      <span class="logo-htmlacademy-title">HTML Academy</span>
+      <span class="logo-htmlacademy__title">HTML Academy</span>
       <img src="images/icons/icon-html-academy.svg" width="27" height="34" alt="html-academy">
     </div>
   </footer>
