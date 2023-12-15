@@ -62,7 +62,6 @@
   z-index: 3;
 
   &::after {
-    @include arrow-helper();
     transform: rotate(-45deg);
     content: '';
     padding: 3px;
@@ -72,7 +71,6 @@
   }
 
   &::before {
-    @include arrow-helper();
     transform: rotate(135deg);
     content: '';
     padding: 3px;
