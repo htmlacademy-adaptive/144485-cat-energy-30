@@ -1,7 +1,31 @@
 /* GLOBAL */
 @import "./global/variables.scss";
-@import "./global/global.scss";
+@import "./global/mixin.scss";
 @import "./global/fonts.scss";
+@import "./global/common.scss";
+@import "./global/visually-hidden.scss";
+@import "./global/container-page.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/logo-title.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/main.scss";
+@import "./blocks/main-catalog.scss";
+@import "./blocks/main-form.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/programs.scss";
+@import "./blocks/how-works.scss";
+@import "./blocks/living-example.scss";
+@import "./blocks/slider-cat.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/card.scss";
+@import "./blocks/additional-products.scss";
+@import "./blocks/gift-information.scss";
+@import "./blocks/form.scss";
+@import "./blocks/form-list.scss";
+@import "./blocks/logo-htmlacademy.scss";
