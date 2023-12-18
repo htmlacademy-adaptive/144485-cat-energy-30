@@ -1,4 +1,17 @@
 .logo-htmlacademy__title {
   font-size: 16px;
   line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    mask-image: url("../../images/icons/stack.svg#icon-html-academy");
+    background-color: #666666;
+  }
 }
+
