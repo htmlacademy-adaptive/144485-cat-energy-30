@@ -1,1 +1,13 @@
-/* stylelint-disable-next-line no-empty-source */
+.container-page {
+  width: auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 110px;
+  }
+}
