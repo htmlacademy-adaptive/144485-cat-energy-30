@@ -5,32 +5,32 @@
   <meta charset="UTF-8">
   <title>Подбор программы</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header">
-    <a class="main-header__logo" href="#">
+  <header class="main-header container-page">
+    <a class="main-header__logo" href="/">
       <picture>
-        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38"
-          srcset="images/icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38"
-          srcset="images/icons/logo-tablet.svg">
-        <img class="main-header__logo-image" src="images/icons/logo-mobile.svg" width="33" height="38"
-          alt="Логотип кот Cate energy.">
+        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-desktop.svg">
+        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-tablet.svg">
+        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
       </picture>
     </a>
     <a class="main-header__logo logo-title" href="#">
-      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
-        alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
     </a>
+    <button class="main-header__button-toggle main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
+        меню</span></button>
     <nav class="main-header__navigation main-nav">
-      <button class="main-nav__toggle main-nav__toggle--active" type="button"><span class="visually-hidden">Открыть
-          меню</span></button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" href="index.html">Главная</a>
+        <li class="main-nav__item ">
+          <a class="main-nav__link main-nav__link-current" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -63,8 +63,7 @@
         <ul class="form__list form-list form-list--radio">
           <li class="form-list__item">
             <label class="form-list__label">
-              <input class="visually-hidden form-list__input" type="radio" name="type-program" value="weight-loss"
-                checked>
+              <input class="visually-hidden form-list__input" type="radio" name="type-program" value="weight-loss" checked>
               <span class="form-list__custom"></span>
               <span class="form-list__text">Похудение</span>
             </label>
@@ -88,8 +87,7 @@
           <h2 class="form__title">Контактные данные (владельца кота)</h2>
           <div class="form-list__group">
             <label class="form-list__label" for="email">E-mail:<sup>*</sup></label>
-            <input class="form-list__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com"
-              required>
+            <input class="form-list__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
           </div>
           <div class="form-list__group">
             <label class="form-list__label" for="tel">Телефон:<sup>*</sup></label>
@@ -98,8 +96,7 @@
         </div>
         <div class="form__list form-list form-list--comments">
           <h2 class="form__title">Комментарий</h2>
-          <textarea class="form-list__input" name="comments" id="message" cols="30" rows="10"
-            placeholder="Расскажите обо всех повадках кота"></textarea>
+          <textarea class="form-list__input" name="comments" id="message" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </div>
         <div class="form__add">
           <h2 class="form__title">Дополнительно</h2>
@@ -144,16 +141,14 @@
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <div class="contacts__map">
         <span class="contacts__point"></span>
-        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362"
-          alt="Карта города с указанием точного местоположения.">
+        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362" alt="Карта города с указанием точного местоположения.">
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
     <div class="main-footer__logo logo-title">
-      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
-        alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
     </div>
     <ul class="main-footer__social-list">
       <li class="main-footer__social-item">

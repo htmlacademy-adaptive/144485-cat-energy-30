@@ -7,19 +7,17 @@
   display: flex;
   width: 30px;
   height: 30px;
+  background-color: #666666;
 
   &--vk {
     mask-image: url("../../images/icons/stack.svg#icon-vk");
-    background-color: #666666;
   }
 
   &--youtube {
     mask-image: url("../../images/icons/stack.svg#icon-youtube");
-    background-color: #666666;
   }
 
   &--telegram {
     mask-image: url("../../images/icons/stack.svg#icon-telegram");
-    background-color: #666666;
   }
 }

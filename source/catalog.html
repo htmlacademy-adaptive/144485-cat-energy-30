@@ -5,32 +5,32 @@
   <meta charset="UTF-8">
   <title>Каталог продукции</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header container-page">
     <a class="main-header__logo" href="#">
       <picture>
-        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38"
-          srcset="images/icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38"
-          srcset="images/icons/logo-tablet.svg">
-        <img class="main-header__logo-image" src="images/icons/logo-mobile.svg" width="33" height="38"
-          alt="Логотип кот Cate energy.">
+        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-desktop.svg">
+        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-tablet.svg">
+        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
       </picture>
     </a>
     <a class="main-header__logo logo-title" href="#">
-      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
-        alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
     </a>
+    <button class="main-header__button-toggle main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
+        меню</span></button>
     <nav class="main-header__navigation main-nav">
-      <button class="main-nav__toggle main-nav__toggle--active" type="button"><span class="visually-hidden">Открыть
-          меню</span></button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--current">
-          <a class="main-nav__link" href="index.html">Главная</a>
+        <li class="main-nav__item ">
+          <a class="main-nav__link main-nav__link-current" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -48,10 +48,8 @@
       <ul class="catalog__list">
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 768px)" type="image/png" width="68" height="86"
-              srcset="images/catalog/catalog-tablet1@1x.png 1x, images/catalog/catalog-tablet1@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile1@1x.jpg"
-              srcset="images/catalog/catalog-mobile1@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
+            <source media="(min-width: 768px)" type="image/png" width="68" height="86" srcset="images/catalog/catalog-tablet1@1x.png 1x, images/catalog/catalog-tablet1@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile1@1x.jpg" srcset="images/catalog/catalog-mobile1@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy PRO 500 г</h3>
           <dl class="card__list">
@@ -72,12 +70,9 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 1200px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-desktop2@1x.png 1x, images/catalog/catalog-desktop2@2x.png 2x">
-            <source media="(min-width: 768px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-tablet2@1x.png 1x, images/catalog/catalog-tablet2@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile2@1x.jpg"
-              srcset="images/catalog/catalog-mobile2@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
+            <source media="(min-width: 1200px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-desktop2@1x.png 1x, images/catalog/catalog-desktop2@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-tablet2@1x.png 1x, images/catalog/catalog-tablet2@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile2@1x.jpg" srcset="images/catalog/catalog-mobile2@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy PRO 1000 г</h3>
           <dl class="card__list">
@@ -98,10 +93,8 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 768px)" type="image/png" width="68" height="86"
-              srcset="images/catalog/catalog-tablet3@1x.png 1x, images/catalog/catalog-tablet3@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile3@1x.jpg"
-              srcset="images/catalog/catalog-mobile3@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
+            <source media="(min-width: 768px)" type="image/png" width="68" height="86" srcset="images/catalog/catalog-tablet3@1x.png 1x, images/catalog/catalog-tablet3@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile3@1x.jpg" srcset="images/catalog/catalog-mobile3@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy PRO 500 г</h3>
           <dl class="card__list">
@@ -122,12 +115,9 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 1200px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-desktop4@1x.png 1x, images/catalog/catalog-desktop4@2x.png 2x">
-            <source media="(min-width: 768px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-tablet4@1x.png 1x, images/catalog/catalog-tablet4@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile4@1x.jpg"
-              srcset="images/catalog/catalog-mobile4@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
+            <source media="(min-width: 1200px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-desktop4@1x.png 1x, images/catalog/catalog-desktop4@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-tablet4@1x.png 1x, images/catalog/catalog-tablet4@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile4@1x.jpg" srcset="images/catalog/catalog-mobile4@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy PRO 1000 г</h3>
           <dl class="card__list">
@@ -148,10 +138,8 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 768px)" type="image/png" width="68" height="86"
-              srcset="images/catalog/catalog-tablet5@1x.png 1x, images/catalog/catalog-tablet5@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile5@1x.jpg"
-              srcset="images/catalog/catalog-mobile5@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
+            <source media="(min-width: 768px)" type="image/png" width="68" height="86" srcset="images/catalog/catalog-tablet5@1x.png 1x, images/catalog/catalog-tablet5@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile5@1x.jpg" srcset="images/catalog/catalog-mobile5@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy slim 500 г</h3>
           <dl class="card__list">
@@ -172,12 +160,9 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 1200px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-desktop6@1x.png 1x, images/catalog/catalog-desktop6@2x.png 2x">
-            <source media="(min-width: 768px)" type="image/png" width="84" height="100"
-              srcset="images/catalog/catalog-tablet6@1x.png 1x, images/catalog/catalog-tablet6@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile6@1x.jpg"
-              srcset="images/catalog/catalog-mobile6@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
+            <source media="(min-width: 1200px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-desktop6@1x.png 1x, images/catalog/catalog-desktop6@2x.png 2x">
+            <source media="(min-width: 768px)" type="image/png" width="84" height="100" srcset="images/catalog/catalog-tablet6@1x.png 1x, images/catalog/catalog-tablet6@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile6@1x.jpg" srcset="images/catalog/catalog-mobile6@2x.jpg" width="84" height="100" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy slim 1000 г</h3>
           <dl class="card__list">
@@ -198,10 +183,8 @@
         </li>
         <li class="catalog__item card">
           <picture>
-            <source media="(min-width: 768px)" type="image/png" width="68" height="86"
-              srcset="images/catalog/catalog-tablet7@1x.png 1x, images/catalog/catalog-tablet7@2x.png 2x">
-            <img class="card__image" src="images/catalog/catalog-mobile7@1x.jpg"
-              srcset="images/catalog/catalog-mobile7@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
+            <source media="(min-width: 768px)" type="image/png" width="68" height="86" srcset="images/catalog/catalog-tablet7@1x.png 1x, images/catalog/catalog-tablet7@2x.png 2x">
+            <img class="card__image" src="images/catalog/catalog-mobile7@1x.jpg" srcset="images/catalog/catalog-mobile7@2x.jpg" width="68" height="86" alt="Корм cat-energy.">
           </picture>
           <h3 class="card__title">Cat Energy slim 500 г</h3>
           <dl class="card__list">
@@ -261,15 +244,13 @@
       <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       <div class="contacts__map">
         <span class="contacts__point"></span>
-        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362"
-          alt="Карта города с указанием точного местоположения.">
+        <img class="contacts__map-image" src="images/map-mobile@2x.png" width="320" height="362" alt="Карта города с указанием точного местоположения.">
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__logo logo-title">
-      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18"
-        alt="Логотип Cate energy.">
+      <img class="logo-title__image" src="images/icons/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
     </div>
     <ul class="main-footer__social-list">
       <li class="main-footer__social-item">

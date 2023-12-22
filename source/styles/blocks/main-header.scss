@@ -3,7 +3,33 @@
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
-  gap: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: min-content 1fr;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 110px;
+    padding-top: 55px;
+  }
+}
+
+.main-header__content {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    grid-column: 1;
+  }
 }
 
 .main-header__button-toggle {
@@ -13,12 +39,53 @@
   border: none;
   padding: 0;
   background-color: transparent;
-  background-image: url("../../images/icons/burger.svg");
+  background-image: url("../../images/icons/stack.svg#burger");
   background-position: center center;
   background-repeat: no-repeat;
+
+  &--open {
+    background-image: url("../../images/icons/stack.svg#burger-close");
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo {
+  @media (min-width: $tablet-width) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 19px;
+  }
+}
+
+.main-header__logo-title {
+  justify-self: center;
 }
 
 .main-header__navigation {
   grid-column: 1/-1;
   display: none;
+  position: absolute;
+  width: 100%;
+  top: 71px;
+  z-index: 2;
+  background-color: #ffffff;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/-1;
+    justify-self: end;
+    display: flex;
+    position: relative;
+    width: revert;
+    top: revert;
+    background-color: transparent;
+  }
 }
