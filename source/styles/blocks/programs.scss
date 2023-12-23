@@ -14,10 +14,63 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+
+  &--slim,
+  &--pro {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 60px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: $bg-color-main;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 140px;
+        height: 194px;
+        position: absolute;
+        right: 88px;
+        top: 67px;
+        background-image: url("../../images/icons/stack.svg#cat-slim");
+      }
+    }
+  }
+
+  &--pro {
+    @media (min-width: $tablet-width) {
+      &::after {
+        width: 280px;
+        height: 112px;
+        top: 119px;
+        right: 18px;
+        background-image: url("../../images/icons/stack.svg#cat-fat");
+      }
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 77px 63px 53px 52px;
+  }
+}
+
+.programs__item--slim .programs__description,
+.programs__item--pro .programs__description {
+  @media (min-width: $tablet-width) {
+    max-width: 340px;
+  }
 }
 
 
-.programs__item--slim .programs__title {
+.programs__item--slim .programs__title,
+.programs__item--pro .programs__title {
   &::before {
     content: "";
     width: 50px;
@@ -30,24 +83,22 @@
   &::after {
     content: "";
     width: 36px;
-    height: 50px;
+    height: 58px;
     position: absolute;
-    left: 8px;
-    top: -3px;
+    left: 6px;
+    top: -7px;
     background-image: url("../../images/icons/stack.svg#cat-slim");
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 }
 
 .programs__item--pro .programs__title {
-  &::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 50%;
-    background-color: $bg-color-main;
-  }
-
   &::after {
     content: "";
     width: 67px;
@@ -72,27 +123,6 @@
   margin: 0;
   margin-bottom: 29px;
   position: relative;
-
-  // &--slim {
-  //   &::before {
-  //     content: "";
-  //     width: 50px;
-  //     height: 50px;
-  //     margin-right: 20px;
-  //     border-radius: 50%;
-  //     background-color: $bg-color-main;
-  //   }
-
-  //   &::after {
-  //     content: "";
-  //     width: 36px;
-  //     height: 50px;
-  //     position: absolute;
-  //     left: 8px;
-  //     top: -3px;
-  //     background-image: url("../../images/icons/stack.svg#cat-slim");
-  //   }
-  // }
 }
 
 .programs__description {
