@@ -5,6 +5,12 @@
 
 .programs__list {
   @include list-style-none;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 570px 570px;
+    gap: 80px;
+  }
 }
 
 .programs__item {
@@ -13,6 +19,10 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 
   &--slim,
@@ -42,6 +52,13 @@
         background-image: url("../../images/icons/stack.svg#cat-slim");
       }
     }
+
+    @media (min-width: $desktop-width) {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
   }
 
   &--pro {
@@ -59,12 +76,20 @@
   @media (min-width: $tablet-width) {
     padding: 77px 63px 53px 52px;
   }
+
+  @media (min-width: $tablet-width) {
+    padding: 47px 61px 55px 52px;
+  }
 }
 
 .programs__item--slim .programs__description,
 .programs__item--pro .programs__description {
   @media (min-width: $tablet-width) {
     max-width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: revert;
   }
 }
 
@@ -78,6 +103,10 @@
     margin-right: 20px;
     border-radius: 50%;
     background-color: $bg-color-main;
+
+    @media (min-width: $desktop-width) {
+      margin-right: 62px;
+    }
   }
 
   &::after {
@@ -96,6 +125,24 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    &::before,
+    &::after {
+      display: block;
+    }
+
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 97px;
+      left: 13px;
+    }
+  }
 }
 
 .programs__item--pro .programs__title {
@@ -107,6 +154,13 @@
     left: -8px;
     top: 13px;
     background-image: url("../../images/icons/stack.svg#cat-fat");
+
+    @media (min-width: $desktop-width) {
+      width: 141px;
+      height: 56px;
+      left: -18px;
+      top: 25px;
+    }
   }
 }
 
@@ -123,6 +177,16 @@
   margin: 0;
   margin-bottom: 29px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 39px;
+  }
 }
 
 .programs__description {
@@ -130,4 +194,17 @@
   padding-bottom: 23px;
   margin-bottom: 15px;
   border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+  }
 }
