@@ -5,10 +5,56 @@
   font-weight: 400;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 40px;
 }
 
 .how-works__list {
   @include list-style-none;
+}
+
+.how-works__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.how-works__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    min-width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: $bg-color-main;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+  }
+
+  &--functional-nutrition {
+    &::before {
+      background-image: url("../../images/icons/icon-how-work1.svg");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../../images/icons/icon-how-work2.svg");
+    }
+  }
+
+  &--replace-doses {
+    &::before {
+      background-image: url("../../images/icons/icon-how-work3.svg");
+    }
+  }
+
+  &--changes-better {
+    &::before {
+      background-image: url("../../images/icons/icon-how-work4.svg");
+    }
+  }
 }
 
 .how-works__description {
