@@ -15,6 +15,7 @@ body {
   line-height: 18px;
   background-color: #ffffff;
   margin: 0;
+  counter-reset: count-list;
 }
 
 main {

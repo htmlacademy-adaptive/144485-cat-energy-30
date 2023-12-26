@@ -8,8 +8,8 @@
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 570px 570px;
-    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    gap: 67px;
   }
 }
 
