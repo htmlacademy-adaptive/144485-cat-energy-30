@@ -3,12 +3,16 @@
   position: relative;
   height: 256px;
   width: 280px;
-  margin: 0 auto;
+
 
   @media (min-width: $tablet-width) {
-    margin-top: 99px;
     width: 560px;
     height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
   }
 }
 

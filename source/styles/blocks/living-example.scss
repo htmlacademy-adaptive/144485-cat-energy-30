@@ -7,6 +7,19 @@
     padding-bottom: 101px;
     background-image: linear-gradient(#ffffff 606px, #ffffff 606px, #eaeaea 606px);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
+    background-image: linear-gradient(#ffffff 181px, #ffffff 181px, #eaeaea 181px);
+  }
+}
+
+.living-example__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 224px 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
 }
 
 .living-example__title {
@@ -16,10 +29,20 @@
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding-top: 25px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding-top: 45px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 146px;
+    padding-top: 0;
   }
 }
 
@@ -29,12 +52,26 @@
     line-height: 24px;
     min-height: 72px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 436px;
+    margin: 0;
+    margin-bottom: 69px;
+    grid-column: 1/2;
+  }
 }
 
 .living-example__content {
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    row-gap: 99px;
+    grid-column: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 366px 1fr;
+    row-gap: 55px;
   }
 }
 
@@ -45,6 +82,24 @@
 
   @media (min-width: $tablet-width) {
     gap: 43px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    align-self: start;
+    margin: 0;
+  }
+}
+
+.living-example__slider {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
   }
 }
 
@@ -91,6 +146,10 @@
     line-height: 14px;
     background: #ffffff;
   }
+
+  @media (min-width: $desktop-width) {
+    background: #eaeaea;
+  }
 }
 
 .living-example__expenses {
@@ -111,5 +170,14 @@
     font-size: 20px;
     justify-self: end;
     gap: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    align-self: start;
+    justify-self: start;
+    flex-direction: row;
+    gap: 63px;
+    margin: 0;
   }
 }

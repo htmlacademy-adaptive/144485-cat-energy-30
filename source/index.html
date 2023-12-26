@@ -102,7 +102,7 @@
       </ul>
     </section>
     <section class="living-example">
-      <div class="container-page">
+      <div class="living-example__container container-page">
         <h2 class="living-example__title">Живой пример</h2>
         <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
           Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
@@ -119,6 +119,7 @@
             </div>
           </dl>
           <p class="living-example__expenses"><span>Затраты на питание:</span> <span>15 000 руб.</span></p>
+
         </div>
         <div class="living-example__slider slider-cat">
           <label for="range">
@@ -188,7 +189,6 @@
 
     inputRange.oninput = function (e) {
       const sliderPos = e.target.value;
-      console.log(sliderPos)
       fatCat.style.width = sliderPos + '%';
       sliderButton.style.left = sliderPos + '%';
     };
