@@ -1,5 +1,16 @@
+.contacts__content {
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 70px;
+  }
+}
+
 .contacts__title {
   color: #111111;
+  width: 140px;
   font-family: $secondary-font;
   font-size: 16px;
   font-style: normal;
@@ -7,9 +18,41 @@
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
+  width: 140px;
   line-height: 20px;
   font-style: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    width: 157px;
+
+    & span {
+      display: block;
+      margin-top: 19px;
+    }
+  }
 }
+
+.contacts__map {
+  position: relative;
+  min-width: 320px;
+  height: 362px;
+  background-image: url("../../images/location.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}
+

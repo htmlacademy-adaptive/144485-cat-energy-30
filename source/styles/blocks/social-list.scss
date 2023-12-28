@@ -1,0 +1,26 @@
+
+.social-list {
+  @include list-style-none;
+  width: 132px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__link {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: #666666;
+
+  &--vk {
+    mask-image: url("../../images/icons/stack.svg#icon-vk");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#icon-youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#icon-telegram");
+  }
+}
