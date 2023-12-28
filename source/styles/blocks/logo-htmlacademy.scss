@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    gap: 23px;
+  }
 }
 
 .logo-htmlacademy__title {
