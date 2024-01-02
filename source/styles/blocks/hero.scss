@@ -27,17 +27,27 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-desktop.jpg");
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        image-set(url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x,
+        url("../../images/index-background-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/index-background-desktop@2x.webp") type("image/webp") 2x);
       background-repeat: no-repeat;
       background-size: auto, cover;
-      background-position: center center;
+      background-position: center right;
       z-index: -2;
     }
   }
 }
 
 .hero__content {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-desktop.jpg");
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    image-set(url("../../images/index-background-mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../../images/index-background-mobile@2x.jpg") type("image/jpeg") 2x,
+    url("../../images/index-background-mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/index-background-mobile@2x.webp") type("image/webp") 2x);
   background-repeat: repeat, no-repeat;
   background-position: center center;
   background-size: auto, cover;
