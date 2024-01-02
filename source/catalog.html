@@ -14,19 +14,21 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header container-page">
-    <a class="main-header__logo" href="#">
-      <picture>
-        <source media="(min-width: 1200px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-desktop.svg">
-        <source media="(min-width: 768px)" type="image/svg+xml" width="33" height="38" srcset="images/logo-tablet.svg">
-        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
-      </picture>
-    </a>
-    <a class="main-header__logo logo-title" href="#">
-      <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
-    </a>
-    <button class="main-header__button-toggle main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
-        меню</span></button>
+  <header class="main-header">
+    <div class="main-header__content">
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo-desktop.svg">
+          <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo-tablet.svg">
+          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
+        </picture>
+      </a>
+      <a class="main-header__logo-title logo-title" href="index.html">
+        <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
+      </a>
+      <button class="main-header__button-toggle main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
+          меню</span></button>
+    </div>
     <nav class="main-header__navigation main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item ">
@@ -277,6 +279,16 @@
       <img src="images/icons/icon-html-academy.svg" width="27" height="34" alt="html-academy">
     </div>
   </footer>
+
+  <script>
+    //menu-mobile
+    const buttonBurger = document.querySelector('.main-header__button-toggle');
+    const navMenu = document.querySelector('.main-header__navigation');
+    buttonBurger.onclick = function () {
+      buttonBurger.classList.toggle('main-header__button-toggle--open')
+      navMenu.classList.toggle('main-header__navigation--open')
+    }
+  </script>
 
 </body>
 
