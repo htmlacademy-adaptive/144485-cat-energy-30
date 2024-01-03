@@ -1,14 +1,19 @@
 .contacts {
   position: relative;
+
+  &--second-color {
+    background-color: #f2f2f2;
+  }
 }
 
 .contacts__content {
-  padding: 26px 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 50px;
+    padding: 60px 40px;
   }
 
   @media (min-width: $desktop-width) {

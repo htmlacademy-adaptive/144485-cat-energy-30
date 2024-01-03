@@ -1,7 +1,73 @@
 .card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
+  border-bottom: 1px solid #ebebeb;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    border-bottom: none;
+    padding: 29px 37px 40px;
+    background-image: linear-gradient(#ffffff 20%, #ffffff 20%, #f2f2f2 20%);
+  }
+}
+
+.card.card--card-more {
+  padding-top: 78px;
+}
+
+.card--card-more {
+  .card__title {
+    margin-bottom: 8px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -53px;
+      width: 30px;
+      height: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url("../../images/icons/stack.svg#icon-plus");
+    }
+  }
+
+  .card__description {
+    margin-bottom: 21px;
+  }
+}
+
+.card__image {
+  flex: 0 0 50%;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex: 0;
+    display: flex;
+    min-height: 206px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+}
+
+.card__content {
+  flex: 0 0 50%;
+
+  @media (min-width: $tablet-width) {
+    flex: 0;
+    margin-bottom: 32px;
+  }
 }
 
 .card__title {
@@ -12,13 +78,45 @@
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
 
 .card__list {
   margin: 0;
 }
 
-.card-more__description {
+.card__description {
   margin: 0;
 }
 
+.card__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 5px;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.card__button {
+  width: 100%;
+  margin-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
+}
