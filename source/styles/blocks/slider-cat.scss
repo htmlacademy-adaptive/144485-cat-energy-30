@@ -3,6 +3,17 @@
   position: relative;
   height: 256px;
   width: 280px;
+
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+  }
 }
 
 .slider-cat__input {
@@ -10,72 +21,59 @@
   appearance: none;
   width: 100%;
   height: 100%;
-  background: rgba(#f2f2f2, 0.3);
-  outline: none;
+  background: transparent;
   margin: 0;
-  z-index: 2;
-
-  &:hover {
-    background: rgba(#f2f2f2, 0.1);
-  }
-
-  &::-webkit-slider-thumb {
-    appearance: none;
-    width: 6px;
-    height: 280px;
-    background-color: #ffffff;
-    cursor: pointer;
-  }
-
-  &::-moz-range-thumb {
-    width: 6px;
-    height: 280px;
-    background: #ffffff;
-    cursor: pointer;
-  }
+  z-index: 1;
 }
 
 .slider-cat__item {
   position: absolute;
+
+
+  &--fat-cat {
+    width: 50%;
+    overflow: hidden;
+    background-color: #eaeaea;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(#ffffff 131px, #ffffff 131px, #eaeaea 131px);
+    }
+  }
 }
 
-.slider-cat__item--fat-cat {
-  width: 50%;
-  overflow: hidden;
-  z-index: 1;
-  background-color: #ffffff;
+.slider-cat__image {
+  display: block;
 }
 
 .slider-cat__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   pointer-events: none;
   position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  top: 50%;
+  width: 40px;
+  height: 100%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 3;
-
-  &::after {
-    transform: rotate(-45deg);
-    content: "";
-    padding: 3px;
-    display: inline-block;
-    border: solid #5d5d5d;
-    border-width: 0 2px 2px 0;
-  }
+  transform: translateX(-50%);
+  z-index: 1;
 
   &::before {
-    transform: rotate(135deg);
     content: "";
-    padding: 3px;
-    display: inline-block;
-    border: solid #5d5d5d;
-    border-width: 0 2px 2px 0;
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../../images/icons/stack.svg#curtain");
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    background-color: #666666;
   }
 }

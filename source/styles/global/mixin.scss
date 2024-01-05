@@ -13,3 +13,8 @@
   padding: 0;
   list-style-type: none;
 }
+
+@mixin wrapper-padding($left:20px, $right:20px) {
+  padding-left: $left;
+  padding-right: $right;
+}
