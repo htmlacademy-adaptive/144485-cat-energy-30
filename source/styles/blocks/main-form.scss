@@ -1,3 +1,7 @@
+.main-form {
+  padding-top: 27px;
+}
+
 .main-form__heading {
   color: #000000;
   font-family: $secondary-font;
@@ -6,6 +10,7 @@
   font-weight: 400;
   line-height: 36px;
   margin: 0;
+  margin-bottom: 37px;
 }
 
 .main-form__description {
@@ -15,5 +20,7 @@
   font-weight: 400;
   line-height: 18px;
   margin: 0;
+  margin-bottom: 39px;
   text-transform: uppercase;
 }
+

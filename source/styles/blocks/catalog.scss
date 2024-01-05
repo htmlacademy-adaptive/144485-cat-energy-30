@@ -1,4 +1,6 @@
 .catalog__title {
+  @include wrapper-padding;
+
   color: #000000;
   font-family: $secondary-font;
   font-size: 36px;
@@ -7,10 +9,15 @@
   margin: 0;
   margin-bottom: 41px;
 
-  @include wrapper-padding;
-
   @media (min-width: $tablet-width) {
     @include wrapper-padding(30px,30px);
+    margin-bottom: 136px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper-padding(110px,110px);
+    width: 1220px;
+    margin: 0 auto 136px;
   }
 }
 
@@ -21,11 +28,20 @@
 
   @media (min-width: $tablet-width) {
     @include wrapper-padding(30px,30px);
-
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    row-gap: 134px;
+    column-gap: 60px;
     border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper-padding(110px,110px);
+    width: 1220px;
+    margin: 0 auto;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 

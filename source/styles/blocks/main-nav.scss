@@ -49,9 +49,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    color: #ffffff;
+    // color: #ffffff;
     font-size: 20px;
     line-height: normal;
   }
 }
 
+.main-nav.main-nav--index-page {
+  .main-nav__link {
+    color: #ffffff;
+  }
+}
