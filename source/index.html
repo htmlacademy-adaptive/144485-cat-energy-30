@@ -32,7 +32,7 @@
     <nav class="main-header__navigation main-nav main-nav--index-page">
       <ul class="main-nav__list">
         <li class="main-nav__item ">
-          <a class="main-nav__link main-nav__link-current" href="index.html">Главная</a>
+          <a class="main-nav__link main-nav__link--current" href="index.html">Главная</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
@@ -51,6 +51,9 @@
       </div>
       <div class="hero__image">
         <picture>
+          <source media="(min-width: 1440px)" type="image/webp" srcset="images/index-can@1x.webp 1x, images/index-can@2x.webp 2x" width="552" height="499">
+          <source media="(min-width: 768px)" type="image/webp" srcset="images/index-can-tablet1@1x.webp 1x, images/index-can-tablet1@2x.webp 2x" width="709" height="609">
+          <source type="image/webp" srcset="images/index-can-mobile1@1x.webp 1x, images/index-can-mobile1@2x.webp 2x" width="280" height="270">
           <source media="(min-width: 1440px)" type="image/png" srcset="images/index-can@1x.png 1x, images/index-can@2x.png 2x" width="552" height="499">
           <source media="(min-width: 768px)" type="image/png" srcset="images/index-can-tablet1@1x.png 1x, images/index-can-tablet1@2x.png 2x" width="709" height="609">
           <img src="images/index-can-mobile1@1x.png" srcset="images/index-can-mobile1@2x.png" width="280" height="270" alt="Корм Cat energy.">
@@ -107,16 +110,16 @@
           Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
           спит по 16 часов в день.</p>
         <div class="living-example__content">
-          <dl class="living-example__list">
-            <div class="living-example__item">
-              <dt class="living-example__number">5 кг</dt>
-              <dd class="living-example__info">Снижение веса</dd>
-            </div>
-            <div class="living-example__item">
-              <dt class="living-example__number">60 дней</dt>
-              <dd class="living-example__info">Затрачено времени</dd>
-            </div>
-          </dl>
+          <ul class="living-example__list">
+            <li class="living-example__item">
+              <p class="living-example__number">5 кг</p>
+              <p class="living-example__info">Снижение веса</p>
+            </li>
+            <li class="living-example__item">
+              <p class="living-example__number">60 дней</p>
+              <p class="living-example__info">Затрачено времени</p>
+            </li>
+          </ul>
           <p class="living-example__expenses"><span>Затраты на питание:</span> <span>15 000 руб.</span></p>
         </div>
         <div class="living-example__slider slider-cat">
@@ -124,15 +127,26 @@
             <span class="visually-hidden">Просмотр изображения кота до и после программы</span>
           </label>
           <input class="slider-cat__input" type="range" name="cat" id="range" min="0" max="100">
-          <div class="slider-cat__button"></div>
+          <div class="slider-cat__button">
+            <svg class="slider-cat__button-image" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <rect x="1" y="1" width="38" height="38" rx="19" fill="white" />
+              <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2" />
+              <path d="M16 11L8 20L16 29V11Z" fill="#666666" />
+              <path d="M32 20L24 11V29L32 20Z" fill="#666666" />
+            </svg>
+          </div>
           <div class="slider-cat__item slider-cat__item--slim-cat">
             <picture>
+              <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-slim@1x.webp 1x, images/slider/desktop-cat-slim@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/slider/mobile-cat-slim@1x.webp 1x, images/slider/mobile-cat-slim@2x.png 2x" width="280" height="256">
               <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-slim@1x.png 1x, images/slider/desktop-cat-slim@2x.png 2x" width="560" height="512">
               <img class="slider-cat__image" src="images/slider/mobile-cat-slim@1x.png" srcset="images/slider/mobile-cat-slim@2x.png" width="280" height="256" alt="Кот, до приема корма Cat energy.">
             </picture>
           </div>
           <div class="slider-cat__item slider-cat__item--fat-cat">
             <picture>
+              <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-fat@1x.webp 1x, images/slider/desktop-cat-fat@2x.webp 2x" width="560" height="512">
+              <source type="image/webp" srcset="images/slider/mobile-cat-fat@1x.webp 1x, images/slider/mobile-cat-fat@2x.png 2x" width="280" height="256">
               <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-fat@1x.png 1x, images/slider/desktop-cat-fat@2x.png 2x" width="560" height="512">
               <img class="slider-cat__image" src="images/slider/mobile-cat-fat@1x.png" srcset="images/slider/mobile-cat-fat@2x.png" width="280" height="256" alt="Кот, после приема корма Cat energy.">
             </picture>
@@ -179,12 +193,12 @@
           </ul>
         </div>
         <div class="main-footer__item">
-          <div class="logo-htmlacademy">
+          <a class="logo-htmlacademy" href="https://htmlacademy.ru">
             <span class="logo-htmlacademy__title">HTML Academy</span>
-            <svg width="27" height="34">
+            <svg class="logo-htmlacademy__image" width="27" height="34">
               <use href="../../images/icons/stack.svg#html-academy"></use>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
     </div>

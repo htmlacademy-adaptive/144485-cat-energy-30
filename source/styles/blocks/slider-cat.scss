@@ -51,20 +51,9 @@
   width: 40px;
   height: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-image: url("../../images/icons/stack.svg#curtain");
-    z-index: 1;
-  }
 
   &::after {
     content: "";
@@ -75,5 +64,44 @@
     transform: translateX(-50%);
     height: 100%;
     background-color: #666666;
+  }
+}
+
+.slider-cat__button-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider-cat:hover {
+  .slider-cat__button::after {
+    background-color: $bg-color-main;
+  }
+
+  .slider-cat__button-image {
+    path {
+      fill: $bg-color-main;
+    }
+
+    rect {
+      stroke: $bg-color-main;
+    }
+  }
+}
+
+.slider-cat:active {
+  .slider-cat__button::after {
+    background-color: $bg-color-main-opacity;
+  }
+
+  .slider-cat__button-image {
+    path {
+      fill: $bg-color-main-opacity;
+    }
+
+    rect {
+      stroke: $bg-color-main-opacity;
+    }
   }
 }

@@ -40,9 +40,16 @@
     }
   }
 
-  .social-list,
+  .social-list {
+    margin: 0 auto;
+  }
+
   .logo-htmlacademy {
     margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 0 auto;
+    }
   }
 
   @media (min-width: $tablet-width) {

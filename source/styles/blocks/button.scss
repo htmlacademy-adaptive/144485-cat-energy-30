@@ -14,12 +14,31 @@
 
   &--main {
     background-color: $bg-color-main;
+
+    &:hover,
+    :focus {
+      background-color: $bg-color-main-hover;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: $bg-color-main-hover;
+    }
   }
 
   &--see-more {
     color: $base-color-text;
     background: #f2f2f2;
     padding: 10px 10px;
+
+    &:hover,
+    :focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+    }
   }
 
   &--info {
@@ -36,6 +55,27 @@
       height: 10px;
       margin-left: 15px;
       background-image: url("../../images/icons/stack.svg#icon-arrow");
+      background-repeat: no-repeat;
+      background-size: 32px;
+      background-position-x: -8px;
+      transition: 0.3s;
     }
   }
+}
+
+
+.button--info:hover,
+.button--info:focus {
+  &::after {
+    background-position-x: -2px;
+  }
+}
+
+.button--info:active {
+  opacity: 0.3;
+}
+
+.button--disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }

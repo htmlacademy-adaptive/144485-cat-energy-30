@@ -1,5 +1,9 @@
 .main-form {
   padding-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 65px;
+  }
 }
 
 .main-form__heading {
@@ -11,6 +15,12 @@
   line-height: 36px;
   margin: 0;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+  }
 }
 
 .main-form__description {
@@ -22,5 +32,11 @@
   margin: 0;
   margin-bottom: 39px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
 

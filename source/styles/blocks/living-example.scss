@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 101px;
-    background-image: linear-gradient(#ffffff 606px, #ffffff 606px, #eaeaea 606px);
+    background-image: linear-gradient(#ffffff 55%, #ffffff 606px, #eaeaea 606px);
   }
 
   @media (min-width: $desktop-width) {
@@ -76,6 +76,7 @@
 }
 
 .living-example__list {
+  @include list-style-none;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
@@ -103,26 +104,24 @@
   }
 }
 
-.living-example__item {
-  text-align: center;
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-  min-height: 56px;
-  position: relative;
+.living-example__number {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 12px;
-}
-
-.living-example__number {
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  min-height: 56px;
   color: #000000;
+  margin: 0;
   text-align: center;
   font-family: $secondary-font;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  padding: 10px;
+  box-sizing: border-box;
+
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -133,13 +132,10 @@
 .living-example__info {
   font-size: 12px;
   line-height: 12px;
-  margin: 0;
-  position: absolute;
   background: #eaeaea;
-  top: 57px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 83px;
+  margin: -8px auto 0;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
