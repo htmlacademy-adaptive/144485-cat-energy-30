@@ -1,8 +1,8 @@
-/* stylelint-disable string-quotes */
 .slider-cat {
   position: relative;
   height: 256px;
   width: 280px;
+  z-index: 1;
 
 
   @media (min-width: $tablet-width) {
@@ -36,7 +36,7 @@
     background-color: #eaeaea;
 
     @media (min-width: $tablet-width) {
-      background-image: linear-gradient(#ffffff 131px, #ffffff 131px, #eaeaea 131px);
+      background-image: linear-gradient(#ffffff 151px, #ffffff 151px, #eaeaea 151px);
     }
   }
 }
@@ -70,7 +70,8 @@
 .slider-cat__button-image {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   z-index: 1;
 }
 

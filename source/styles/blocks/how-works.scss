@@ -2,8 +2,8 @@
   padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
-    padding-bottom: 47px;
+    padding-top: 28px;
+    padding-bottom: 56px;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -36,7 +36,7 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 77px 137px;
+    gap: 87px 59px;
   }
 
   @media (min-width: $desktop-width) {
@@ -110,7 +110,7 @@
       counter-increment: count-list;
       content: counter(count-list);
       top: -37px;
-      right: 14px;
+      left: 116px;
       color: #f2f2f2;
       text-align: center;
       font-family: "Oswald", sans-serif;

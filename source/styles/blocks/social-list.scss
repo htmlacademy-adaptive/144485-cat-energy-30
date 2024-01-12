@@ -1,7 +1,7 @@
 
 .social-list {
   @include list-style-none;
-  width: 132px;
+  width: 154px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
@@ -10,8 +10,8 @@
 
 .social-list__link {
   display: flex;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 22px;
   background-color: #666666;
 
   &:hover,
@@ -34,5 +34,6 @@
 
   &--telegram {
     mask-image: url("../../images/icons/stack.svg#icon-telegram");
+    background-size: 28px;
   }
 }

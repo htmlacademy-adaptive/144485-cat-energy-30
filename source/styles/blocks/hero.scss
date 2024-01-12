@@ -11,6 +11,7 @@
     text-align: left;
     min-height: revert;
     padding-left: 120px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -51,13 +52,13 @@
   background-repeat: repeat, no-repeat;
   background-position: center center;
   background-size: auto, cover;
-  min-height: 302px;
-  padding-top: 27px;
+  min-height: 274px;
+  padding-top: 28px;
 
   @media (min-width: $tablet-width) {
     background: none;
     min-height: revert;
-    padding-top: 65px;
+    padding-top: 61px;
   }
 
   @media (min-width: $desktop-width) {
@@ -71,7 +72,7 @@
   font-size: 36px;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
   padding: 0 35px;
 
   @media (min-width: $tablet-width) {
@@ -107,13 +108,13 @@
 }
 
 .hero__image {
-  margin-top: -147px;
+  margin-top: -135px;
 
   @media (min-width: $tablet-width) {
     order: 3;
     position: relative;
-    top: 71px;
-    left: -80px;
+    top: 52px;
+    left: -90px;
     z-index: -1;
   }
 
