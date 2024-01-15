@@ -26,18 +26,30 @@
   z-index: 1;
 }
 
+.slider-cat__block {
+  display: flex;
+}
+
 .slider-cat__item {
-  position: absolute;
+  // position: absolute;
+  width: 50%;
+  display: flex;
+  overflow: hidden;
 
 
   &--fat-cat {
-    width: 50%;
-    overflow: hidden;
-    background-color: #eaeaea;
+    // width: 50%;
+    justify-content: left;
+    // background-color: #eaeaea;
 
     @media (min-width: $tablet-width) {
-      background-image: linear-gradient(#ffffff 151px, #ffffff 151px, #eaeaea 151px);
+      //   background-image: linear-gradient(#ffffff 151px, #ffffff 151px, #eaeaea 151px);
+      // }
     }
+  }
+
+  &--slim-cat {
+    justify-content: right;
   }
 }
 

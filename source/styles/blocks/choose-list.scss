@@ -1,32 +1,18 @@
 .choose-list {
-  padding-top: 22px;
-
   &--radio {
     @media (min-width: $tablet-width) {
       border: 1px solid #e7e7e7;
-      padding: 23px 27px 27px;
-      margin-top: 72px;
-      margin-bottom: 65px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding: 25px 28px 25px;
-      margin-top: 0;
-      margin-bottom: 0;
     }
   }
 }
 
 .choose-list--checkbox {
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
     row-gap: 32px;
-    column-gap: 10px;
-
-    .choose-list__item {
-      flex: 0 0 49%;
-    }
+    column-gap: 60px;
 
     .choose-list__item:not(:last-child) {
       margin-bottom: 0;
@@ -34,6 +20,9 @@
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+
     .choose-list__item {
       flex: 0 0 24%;
     }
@@ -41,7 +30,7 @@
 }
 
 .choose-list__item:not(:last-child) {
-  margin-bottom: 27px;
+  margin-bottom: 13px;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 13px;
@@ -49,15 +38,16 @@
 }
 
 .choose-list__label {
-  padding-left: 45px;
-  position: relative;
   display: flex;
+  gap: 15px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    gap: 21px;
+  }
 }
 
 .choose-list__custom {
-  position: absolute;
-  left: 0;
-  top: -4px;
   width: 30px;
   height: 30px;
   border: 1px solid #cdcdcd;
@@ -72,12 +62,18 @@
 
   @media (min-width: $tablet-width) {
     top: 0;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .choose-list__input[type="radio"]:checked + .choose-list__custom--radio {
   background-image: url("../../images/icons/stack.svg#radiobutton");
   background-size: 13px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 18px;
+  }
 }
 
 .choose-list__input[type="checkbox"]:checked + .choose-list__custom--checkbox {

@@ -44,22 +44,22 @@
     </nav>
   </header>
   <main class="main-form">
-    <section>
+    <section class="main-form__wrapper">
       <div class="container-page">
         <h1 class="main-form__heading">Подбор программы</h1>
-        <p class="main-form__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+        <p class="main-form__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
       </div>
       <form class="form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form__block">
           <div class="form__item">
             <div class="form__wrapper">
-              <ul class="form__list form-list">
+              <ul class="form__fio form-list">
                 <li class="form-list__item">
-                  <label class="form-list__label" for="name">Имя:<sup>*</sup></label>
+                  <label class="form-list__label" for="name">Имя:*</label>
                   <input class="form-list__input" type="text" name="name" id="name" value="барсик" placeholder="Имя" required>
                 </li>
                 <li class="form-list__item">
-                  <label class="form-list__label" for="weight">Вес (кг):</label>
+                  <label class="form-list__label" for="weight">Вес (кг):*</label>
                   <input class="form-list__input" type="number" name="weight" id="weight" value="7" placeholder="Вес">
                 </li>
                 <li class="form-list__item">
@@ -71,7 +71,7 @@
           </div>
           <div class="form__item">
             <div class="form__wrapper">
-              <ul class="form__list choose-list choose-list--radio">
+              <ul class="form__radio choose-list choose-list--radio">
                 <li class="choose-list__item">
                   <label class="choose-list__label">
                     <input class="visually-hidden choose-list__input" type="radio" name="type-program" value="weight-loss" checked>
@@ -97,30 +97,30 @@
             </div>
           </div>
         </div>
-        <div class="form__list form-list form-list--contact-info">
+        <div class="form__contact-info form-list form-list--contact-info">
           <div class="container-page">
-            <h2 class="form__title form__title--style">Контактные данные (владельца кота)</h2>
+            <h2 class="form__title-contact form-title form-title--style">Контактные данные (владельца кота)</h2>
             <ul class="form-list__wrapper">
               <li class="form-list__item">
-                <label class="form-list__label" for="email">E-mail:<sup>*</sup></label>
+                <label class="form-list__label" for="email">E-mail:*</label>
                 <input class="form-list__input form-list__input--mail" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
               </li>
               <li class="form-list__item">
-                <label class="form-list__label" for="tel">Телефон:<sup>*</sup></label>
+                <label class="form-list__label" for="tel">Телефон:*</label>
                 <input class="form-list__input form-list__input--tel" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </div>
         </div>
-        <div class="form__list form-list form-list--comments">
+        <div class="form__comments form-list form-list--comments">
           <div class="container-page">
-            <h2 class="form__title form__title--style">Комментарий</h2>
-            <textarea class="form-list__input" name="comments" id="message" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <h2 class="form__title-comments form-title form-title--style">Комментарий</h2>
+            <textarea class="form-list__input form-list__input--textarea" name="comments" id="message" cols="30" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
         <div class="form__add container-page">
-          <h2 class="form__title form__title--style">Дополнительно</h2>
-          <ul class="form__list choose-list choose-list--checkbox">
+          <h2 class="form__title-addition form-title form-title--style">Дополнительно</h2>
+          <ul class="form__checkbox choose-list choose-list--checkbox">
             <li class="choose-list__item">
               <label class="choose-list__label">
                 <input class="visually-hidden choose-list__input" type="checkbox" name="sweetener" checked>
@@ -153,7 +153,7 @@
         </div>
         <div class="form__button-group container-page">
           <button class="form__button button button--main" type="submit">Отправить заявку</button>
-          <p class="form__addition-information"><sup>*</sup> — Обязательные поля</p>
+          <p class="form__addition-information">* &ndash; Обязательные поля</p>
         </div>
       </form>
     </section>
@@ -161,7 +161,7 @@
       <h2 class="visually-hidden">Контакты</h2>
       <div class="container-page">
         <div class="contacts__content">
-          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</p>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
         </div>
       </div>

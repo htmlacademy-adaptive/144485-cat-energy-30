@@ -1,13 +1,3 @@
-.form-list {
-  position: relative;
-
-  &--contact-info {
-    @media (min-width: $tablet-width) {
-      padding-bottom: 65px;
-    }
-  }
-}
-
 .form-list__wrapper {
   @include list-style-none;
 
@@ -47,7 +37,7 @@
 }
 
 .form-list__label {
-  margin-right: 13px;
+  margin-right: 15px;
   flex: 0 0 auto;
   max-width: 120px;
 }
@@ -66,14 +56,13 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 14px 15px 13px;
-  padding-right: 40px;
+  padding: 12px 40px 13px 13px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #e7e7e7;
   background-repeat: no-repeat;
-  background-position: center right 12px;
-  background-size: 20px;
+  background-position: top 2px right 12px;
+  background-size: 18px;
   appearance: textfield;
 
   &::placeholder {
@@ -86,17 +75,20 @@
     text-transform: uppercase;
   }
 
-  @media (min-width: $tablet-width) {
-    padding: 11px 20px;
-    padding-right: 40px;
-  }
-
   &--mail {
     background-image: url("../../images/icons/stack.svg#icon-mail");
   }
 
   &--tel {
     background-image: url("../../images/icons/stack.svg#icon-tel");
+  }
+
+  &--textarea {
+    padding: 14px 10px 10px 15px;
+
+    @media (min-width: $tablet-width) {
+      max-height: 175px;
+    }
   }
 
   &:hover {
@@ -106,5 +98,19 @@
   &:not(:focus):not(:placeholder-shown):invalid {
     outline: 1px solid #ff8282;
   }
-}
 
+  @media (min-width: $tablet-width) {
+    padding: 10px 40px 10px 18px;
+    font-size: 20px;
+    line-height: normal;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: center right 17px;
+  }
+}

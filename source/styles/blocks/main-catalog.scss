@@ -4,5 +4,10 @@
 
   @media (min-width: $tablet-width) {
     border-top: none;
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
   }
 }

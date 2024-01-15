@@ -44,7 +44,7 @@
     padding-bottom: 0;
 
     &::before {
-      left: 19%;
+      left: 17%;
     }
   }
 
@@ -57,7 +57,7 @@
       url("../../images/bgi-gift-mobile@2x.jpg") type("image/jpeg") 2x,
       url("../../images/bgi-gift-mobile@1x.webp") type("image/webp") 1x,
       url("../../images/bgi-gift-mobile@2x.webp") type("image/webp") 2x);
-
+    background-position: right;
     padding-bottom: 43px;
 
     &::before {
@@ -72,13 +72,13 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    flex-basis: 25%;
+    flex-basis: 32%;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
     flex-basis: 100%;
     text-align: center;
-    padding: 10px 48px;
+    padding: 0 31px;
   }
 }

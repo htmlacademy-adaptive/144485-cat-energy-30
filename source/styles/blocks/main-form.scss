@@ -2,7 +2,21 @@
   padding-top: 27px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 65px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 71px;
+  }
+}
+
+.main-form__wrapper {
+  @media (min-width: $tablet-width) {
+    padding: 61px 40px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
   }
 }
 
@@ -36,7 +50,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    margin-bottom: 66px;
+    margin-bottom: 67px;
   }
 }
 

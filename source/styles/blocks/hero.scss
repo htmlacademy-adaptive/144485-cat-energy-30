@@ -18,7 +18,8 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content 1fr;
-    min-height: 694px;
+    min-height: 608px;
+    padding-left: 159px;
 
     &::after {
       content: "";
@@ -85,6 +86,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    margin-bottom: 36px;
   }
 }
 
@@ -124,7 +126,7 @@
     grid-row: 1/-1;
     order: 0;
     position: relative;
-    left: -32px;
+    left: -52px;
     top: 25px;
   }
 }
@@ -150,5 +152,6 @@
     order: 0;
     grid-row: 2;
     margin: 0;
+    margin-top: 4px;
   }
 }

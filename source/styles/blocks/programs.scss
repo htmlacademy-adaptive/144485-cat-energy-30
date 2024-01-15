@@ -9,7 +9,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 67px;
+    gap: 78px;
   }
 }
 
@@ -82,11 +82,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding: 76px 61px 56px 52px;
+    padding: 76px 61px 58px 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 47px 61px 55px 52px;
+    padding: 47px 61px 61px 52px;
   }
 }
 
@@ -131,7 +131,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 27px;
   }
 }
 
@@ -196,7 +196,7 @@
       width: 70px;
       height: 97px;
       left: 13px;
-      top: 47%;
+      top: 42%;
     }
   }
 }
@@ -214,7 +214,7 @@
       width: 141px;
       height: 56px;
       left: -18px;
-      top: 50%;
+      top: 48%;
       transform: translateY(-50%);
     }
   }

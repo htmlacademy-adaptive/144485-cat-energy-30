@@ -21,6 +21,13 @@
   }
 
   @media (min-width: $desktop-width) {
+    &::after {
+      min-height: 464px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
     padding-bottom: 75px;
   }
 }
@@ -58,6 +65,7 @@
   }
 }
 
+
 .living-example__description {
   margin: 0;
   margin-bottom: 20px;
@@ -74,6 +82,15 @@
     margin: 0;
     margin-bottom: 69px;
     grid-column: 1/2;
+    z-index: 1;
+  }
+}
+
+.living-example__br {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
@@ -86,7 +103,9 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 366px 1fr;
-    row-gap: 55px;
+    row-gap: 43px;
+    grid-column: 1/1;
+    z-index: 1;
   }
 }
 
@@ -115,7 +134,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 25px;
+    margin-top: 0;
   }
 }
 

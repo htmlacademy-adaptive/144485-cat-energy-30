@@ -102,8 +102,8 @@
     <section class="living-example">
       <div class="living-example__container container-page">
         <h2 class="living-example__title">Живой пример</h2>
-        <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
-          Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему
+        <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой<br class="living-example__br"> обычный корм на Cat
+          Energy Slim. Отличный результат<br class="living-example__br">без изнуряющих тренировок! При этом он не менял своих<br class="living-example__br">привычек и по-прежнему
           спит по 16 часов в день.</p>
         <div class="living-example__content">
           <ul class="living-example__list">
@@ -128,21 +128,24 @@
               <use href="images/icons/stack.svg#curtain"></use>
             </svg>
           </div>
-          <div class="slider-cat__item slider-cat__item--slim-cat">
-            <picture>
-              <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-slim@1x.webp 1x, images/slider/desktop-cat-slim@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="images/slider/mobile-cat-slim@1x.webp 1x, images/slider/mobile-cat-slim@2x.png 2x" width="280" height="256">
-              <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-slim@1x.png 1x, images/slider/desktop-cat-slim@2x.png 2x" width="560" height="512">
-              <img class="slider-cat__image" src="images/slider/mobile-cat-slim@1x.png" srcset="images/slider/mobile-cat-slim@2x.png" width="280" height="256" alt="Кот, до приема корма Cat energy.">
-            </picture>
-          </div>
-          <div class="slider-cat__item slider-cat__item--fat-cat">
-            <picture>
-              <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-fat@1x.webp 1x, images/slider/desktop-cat-fat@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="images/slider/mobile-cat-fat@1x.webp 1x, images/slider/mobile-cat-fat@2x.png 2x" width="280" height="256">
-              <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-fat@1x.png 1x, images/slider/desktop-cat-fat@2x.png 2x" width="560" height="512">
-              <img class="slider-cat__image" src="images/slider/mobile-cat-fat@1x.png" srcset="images/slider/mobile-cat-fat@2x.png" width="280" height="256" alt="Кот, после приема корма Cat energy.">
-            </picture>
+          <div class="slider-cat__block">
+            <div class="slider-cat__item slider-cat__item--fat-cat">
+              <picture>
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-fat@1x.webp 1x, images/slider/desktop-cat-fat@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/slider/mobile-cat-fat@1x.webp 1x, images/slider/mobile-cat-fat@2x.png 2x" width="280" height="256">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-fat@1x.png 1x, images/slider/desktop-cat-fat@2x.png 2x" width="560" height="512">
+                <img class="slider-cat__image" src="images/slider/mobile-cat-fat@1x.png" srcset="images/slider/mobile-cat-fat@2x.png" width="280" height="256" alt="Кот, после приема корма Cat energy.">
+              </picture>
+            </div>
+            <div class="slider-cat__item slider-cat__item--slim-cat">
+              <picture>
+                <source media="(min-width: 768px)" type="image/webp" srcset="images/slider/desktop-cat-slim@1x.webp 1x, images/slider/desktop-cat-slim@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="images/slider/mobile-cat-slim@1x.webp 1x, images/slider/mobile-cat-slim@2x.png 2x" width="280" height="256">
+                <source media="(min-width: 768px)" type="image/png" srcset="images/slider/desktop-cat-slim@1x.png 1x, images/slider/desktop-cat-slim@2x.png 2x" width="560" height="512">
+                <img class="slider-cat__image" src="images/slider/mobile-cat-slim@1x.png" srcset="images/slider/mobile-cat-slim@2x.png" width="280" height="256" alt="Кот, до приема корма Cat energy.">
+              </picture>
+            </div>
+
           </div>
         </div>
       </div>
@@ -200,6 +203,17 @@
 
   <script>
 
+    // // slider
+    // const inputRange = document.querySelector('.slider-cat__input');
+    // const fatCat = document.querySelector('.slider-cat__item--fat-cat');
+    // const slimCat = document.querySelector('.slider-cat__item--slim-cat');
+    // const sliderButton = document.querySelector('.slider-cat__button');
+
+    // inputRange.oninput = function (e) {
+    //   const sliderPos = e.target.value;
+    //   fatCat.style.width = sliderPos + '%';
+    //   sliderButton.style.left = sliderPos + '%';
+    // };
     // slider
     const inputRange = document.querySelector('.slider-cat__input');
     const fatCat = document.querySelector('.slider-cat__item--fat-cat');
@@ -207,8 +221,16 @@
     const sliderButton = document.querySelector('.slider-cat__button');
 
     inputRange.oninput = function (e) {
+      console.log(e.target.value)
       const sliderPos = e.target.value;
+      const sliderPosRevert = e.target.value;
       fatCat.style.width = sliderPos + '%';
+      if (sliderPos < 50) {
+        console.log(e.target.value + "css")
+
+        slimCat.style.width = y + '%';
+
+      }
       sliderButton.style.left = sliderPos + '%';
     };
 

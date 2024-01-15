@@ -51,16 +51,22 @@
   width: 140px;
   line-height: 20px;
   font-style: normal;
+  text-align: left;
+
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     width: 157px;
-    text-align: end;
+    text-align: right;
 
     & span {
       display: block;
       margin-top: 19px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }
 
