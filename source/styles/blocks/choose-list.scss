@@ -55,6 +55,7 @@
   background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
+  flex-shrink: 0;
 
   &--radio {
     border-radius: 50%;

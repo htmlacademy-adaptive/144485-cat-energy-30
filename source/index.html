@@ -119,15 +119,12 @@
           <p class="living-example__expenses"><span>Затраты на питание:</span> <span>15 000 руб.</span></p>
         </div>
         <div class="living-example__slider slider-cat">
-          <label for="range">
-            <span class="visually-hidden">Просмотр изображения кота до и после программы</span>
-          </label>
-          <input class="slider-cat__input" type="range" name="cat" id="range" min="0" max="100">
-          <div class="slider-cat__button">
+          <button class="slider-cat__button" type="button">
             <svg class="slider-cat__button-image" width="40" height="40">
-              <use href="images/icons/stack.svg#curtain"></use>
+              <use href="images/icons/stack.svg#thumb"></use>
             </svg>
-          </div>
+            <span class="visually-hidden">Переключает состояние котов до и после приема корма</span>
+          </button>
           <div class="slider-cat__block">
             <div class="slider-cat__item slider-cat__item--fat-cat">
               <picture>
@@ -145,7 +142,6 @@
                 <img class="slider-cat__image" src="images/slider/mobile-cat-slim@1x.png" srcset="images/slider/mobile-cat-slim@2x.png" width="280" height="256" alt="Кот, до приема корма Cat energy.">
               </picture>
             </div>
-
           </div>
         </div>
       </div>
@@ -215,24 +211,6 @@
     //   sliderButton.style.left = sliderPos + '%';
     // };
     // slider
-    const inputRange = document.querySelector('.slider-cat__input');
-    const fatCat = document.querySelector('.slider-cat__item--fat-cat');
-    const slimCat = document.querySelector('.slider-cat__item--slim-cat');
-    const sliderButton = document.querySelector('.slider-cat__button');
-
-    inputRange.oninput = function (e) {
-      console.log(e.target.value)
-      const sliderPos = e.target.value;
-      const sliderPosRevert = e.target.value;
-      fatCat.style.width = sliderPos + '%';
-      if (sliderPos < 50) {
-        console.log(e.target.value + "css")
-
-        slimCat.style.width = y + '%';
-
-      }
-      sliderButton.style.left = sliderPos + '%';
-    };
 
     //menu-mobile
     const buttonBurger = document.querySelector('.main-header__button-toggle');
