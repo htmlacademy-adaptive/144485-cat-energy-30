@@ -47,6 +47,7 @@
   top: 50%;
   background: none;
   transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -76,6 +77,22 @@
       }
     }
   }
+
+  &:active {
+    &::after {
+      background-color: $bg-color-main-opacity;
+    }
+
+    .slider-cat__button-image {
+      path {
+        fill: $bg-color-main-opacity;
+      }
+
+      rect {
+        stroke: $bg-color-main-opacity;
+      }
+    }
+  }
 }
 
 .slider-cat__button-image {
@@ -84,22 +101,4 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 1;
-
-  path {
-    fill: #666666;
-  }
-
-  rect {
-    stroke: #666666;
-  }
-}
-
-.slider-cat__button:hover .slider-cat__button-image {
-  path {
-    fill: $bg-color-main;
-  }
-
-  rect {
-    stroke: $bg-color-main;
-  }
 }

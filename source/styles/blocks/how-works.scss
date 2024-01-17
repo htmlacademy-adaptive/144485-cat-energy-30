@@ -26,10 +26,10 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 72px;
+    margin-bottom: 70px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 76px;
   }
 }
@@ -128,8 +128,17 @@
 .how-works__description {
   margin: 0;
 
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.how-works__br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }

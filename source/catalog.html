@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Каталог продукции</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
@@ -20,16 +22,16 @@
         <picture>
           <source media="(min-width: 1440px)" type="image/svg+xml" width="70" height="59" srcset="images/logo-desktop.svg">
           <source media="(min-width: 768px)" type="image/svg+xml" width="60" height="50" srcset="images/logo-tablet.svg">
-          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
+          <img src="images/logo-mobile.svg" width="33" height="38" alt="Логотип кот Cate energy.">
         </picture>
       </a>
       <a class="main-header__logo-title logo-title" href="index.html">
         <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
       </a>
-      <button class="main-header__button-toggle main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
+      <button class="main-header__button-toggle main-header__button-toggle--no-js main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
           меню</span></button>
     </div>
-    <nav class="main-header__navigation main-nav">
+    <nav class="main-header__navigation main-header__navigation--no-js main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item ">
           <a class="main-nav__link" href="index.html">Главная</a>
@@ -298,7 +300,7 @@
         </div>
       </div>
       <div class="contacts__map">
-        <iframe class="contacts__iframe" src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=17.11"></iframe>
+        <iframe class="contacts__iframe contacts__iframe--no-js" src="https://yandex.ru/map-widget/v1/?ll=30.323036%2C59.938631&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzM5NDE4NBJh0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQu9C40YbQsCwgMTkvOCIKDZaV8kEVKcFvQg%2C%2C&z=17.11"></iframe>
       </div>
     </section>
   </main>
@@ -338,17 +340,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    //menu-mobile
-    const buttonBurger = document.querySelector('.main-header__button-toggle');
-    const navMenu = document.querySelector('.main-header__navigation');
-    buttonBurger.onclick = function () {
-      buttonBurger.classList.toggle('main-header__button-toggle--open')
-      navMenu.classList.toggle('main-header__navigation--open')
-    }
-  </script>
-
 </body>
 
 </html>

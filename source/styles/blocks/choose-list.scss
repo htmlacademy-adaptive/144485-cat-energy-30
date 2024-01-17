@@ -41,6 +41,7 @@
   display: flex;
   gap: 15px;
   align-items: center;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     gap: 21px;
@@ -59,6 +60,10 @@
 
   &--radio {
     border-radius: 50%;
+  }
+
+  &:hover {
+    border-color: #bababa;
   }
 
   @media (min-width: $tablet-width) {
@@ -84,4 +89,10 @@
 
 .choose-list__input:focus + .choose-list__custom {
   border: 1px solid #000000;
+}
+
+.choose-list__label:has(.choose-list__input:disabled) {
+  opacity: 0.3;
+  cursor: default;
+  border-color: #cdcdcd;
 }

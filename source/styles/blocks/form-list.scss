@@ -17,6 +17,7 @@
 .form-list__item {
   display: flex;
   align-items: center;
+  position: relative;
 
   @media (min-width: $desktop-width) {
     flex: 0 0 50%;
@@ -48,6 +49,20 @@
   margin: 0;
 }
 
+.form-list__icon {
+  position: absolute;
+  right: 13px;
+
+  path {
+    fill: #ffffff;
+    stroke: #666666;
+  }
+
+  @media (min-width: $tablet-width) {
+    right: 16px;
+  }
+}
+
 .form-list__input {
   color: #444444;
   font-family: $secondary-font;
@@ -75,14 +90,6 @@
     text-transform: uppercase;
   }
 
-  &--mail {
-    mask-image: url("../../images/icons/stack.svg#icon-mail");
-  }
-
-  &--tel {
-    background-image: url("../../images/icons/stack.svg#icon-tel");
-  }
-
   &--textarea {
     padding: 14px 10px 10px 15px;
 
@@ -99,8 +106,19 @@
     outline: 2px solid #444444;
   }
 
+  &:disabled {
+    opacity: 0.3;
+    outline: none;
+  }
+
   &:not(:focus):not(:placeholder-shown):invalid {
     outline: 2px solid #ff8282;
+
+    ~.form-list__icon {
+      path {
+        stroke: #ff8282;
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -120,10 +138,16 @@
 
   &--error {
     outline: 2px solid #ff8282;
-    background-color: #ff8282;
 
     &:hover {
       outline: 2px solid #ff8282;
     }
   }
 }
+
+.form-list__input--error ~ .form-list__icon {
+  path {
+    stroke: #ff8282;
+  }
+}
+

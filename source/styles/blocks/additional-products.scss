@@ -139,6 +139,8 @@
     font-size: 20px;
     line-height: 20px;
     margin-bottom: 24px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 
   @media (min-width: $desktop-width) {

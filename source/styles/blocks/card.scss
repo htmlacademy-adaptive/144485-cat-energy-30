@@ -23,7 +23,7 @@
   }
 }
 
-.card.card--card-more {
+.card--card-more {
   justify-content: center;
   background: none;
   padding-top: 79px;
@@ -36,9 +36,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 148px;
   }
-}
 
-.card--card-more {
   .card__title {
     margin-bottom: 9px;
     position: relative;
@@ -90,6 +88,7 @@
       line-height: 18px;
       max-width: 217px;
       margin: 0 auto;
+      padding-bottom: 10px;
     }
   }
 }
@@ -155,11 +154,13 @@
 
 .card__description {
   margin: 0;
+  text-align: right;
 }
 
 .card__item {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
