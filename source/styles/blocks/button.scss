@@ -61,6 +61,17 @@
       transition: 0.3s;
     }
 
+    &:hover,
+    &:focus {
+      &::after {
+        background-position-x: -2px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media (min-width: $tablet-width) {
       &::after {
         margin-left: 29px;
@@ -72,21 +83,9 @@
       line-height: normal;
     }
   }
-}
 
-
-.button--info:hover,
-.button--info:focus {
-  &::after {
-    background-position-x: -2px;
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
-}
-
-.button--info:active {
-  opacity: 0.3;
-}
-
-.button--disabled {
-  opacity: 0.3;
-  pointer-events: none;
 }

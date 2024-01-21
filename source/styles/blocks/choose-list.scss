@@ -58,12 +58,12 @@
   box-sizing: border-box;
   flex-shrink: 0;
 
-  &--radio {
-    border-radius: 50%;
-  }
-
   &:hover {
     border-color: #bababa;
+  }
+
+  &--radio {
+    border-radius: 50%;
   }
 
   @media (min-width: $tablet-width) {

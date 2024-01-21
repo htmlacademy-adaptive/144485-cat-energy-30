@@ -28,8 +28,9 @@
       <a class="main-header__logo-title logo-title" href="index.html">
         <img class="logo-title__image" src="images/logo-title.svg" width="101" height="18" alt="Логотип Cate energy.">
       </a>
-      <button class="main-header__button-toggle main-header__button-toggle--no-js main-header__button-toggle--active" type="button"><span class="visually-hidden">Открыть
-          меню</span></button>
+      <button class="main-header__button-toggle main-header__button-toggle--no-js" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
     </div>
     <nav class="main-header__navigation main-header__navigation--no-js main-nav">
       <ul class="main-nav__list">
@@ -45,7 +46,7 @@
       </ul>
     </nav>
   </header>
-  <main class="main-form">
+  <main class="page__main main-form">
     <section class="main-form__wrapper">
       <div class="container-page">
         <h1 class="main-form__heading">Подбор программы</h1>
@@ -101,7 +102,7 @@
             </div>
           </div>
         </div>
-        <div class="form__contact-info form-list form-list--contact-info">
+        <div class="form__contact-info form-list">
           <div class="container-page">
             <h2 class="form__title-contact form-title form-title--style">Контактные данные (владельца кота)</h2>
             <ul class="form-list__wrapper">
@@ -124,7 +125,7 @@
             </ul>
           </div>
         </div>
-        <div class="form__comments form-list form-list--comments">
+        <div class="form__comments form-list">
           <div class="container-page">
             <h2 class="form__title-comments form-title form-title--style">Комментарий</h2>
             <label class="visually-hidden" for="message">Комментарий</label>
@@ -175,7 +176,8 @@
       <div class="container-page">
         <div class="contacts__content">
           <p class="contacts__title">Приглашаем<br> к сотрудничеству дилеров!</p>
-          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address-span">Санкт-Петербург</span>
+          </address>
         </div>
       </div>
       <div class="contacts__map">
@@ -183,26 +185,27 @@
       </div>
     </section>
   </main>
-
   <footer class="main-footer">
     <div class="container-page">
       <div class="main-footer__content">
         <div class="main-footer__item">
-          <a class="logo-title" href="index.html"><img class="logo-title__image" src="images/logo-title.svg" width="128" height="24" alt="Логотип Cate energy."></a>
+          <a class="logo-title" href="index.html">
+            <img class="logo-title__image" src="images/logo-title.svg" width="128" height="24" alt="Логотип Cate energy.">
+          </a>
         </div>
         <div class="main-footer__item">
           <ul class="social-list">
-            <li class="social-list__item">
+            <li>
               <a class="social-list__link social-list__link--vk" href="#">
                 <span class="visually-hidden">Переход в группу вконтакте</span>
               </a>
             </li>
-            <li class="social-list__item">
+            <li>
               <a class="social-list__link social-list__link--youtube" href="#">
                 <span class="visually-hidden">Переход на канал в ютубе</span>
               </a>
             </li>
-            <li class="social-list__item">
+            <li>
               <a class="social-list__link social-list__link--telegram" href="#">
                 <span class="visually-hidden">Переход в телеграмм канал</span>
               </a>
@@ -210,10 +213,10 @@
           </ul>
         </div>
         <div class="main-footer__item">
-          <a class="logo-htmlacademy" href="https://htmlacademy.ru">
+          <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="logo-htmlacademy__title">HTML Academy</span>
             <svg class="logo-htmlacademy__image" width="27" height="34">
-              <use href="../../images/icons/stack.svg#html-academy"></use>
+              <use href="images/icons/stack.svg#html-academy"></use>
             </svg>
           </a>
         </div>

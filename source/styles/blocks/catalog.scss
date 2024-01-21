@@ -25,11 +25,13 @@
 
 .catalog__list {
   @include list-style-none;
+
   display: block;
   border-top: 1px solid #ebebeb;
 
   @media (min-width: $tablet-width) {
     @include wrapper-padding(30px,30px);
+
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -40,6 +42,7 @@
 
   @media (min-width: $desktop-width) {
     @include wrapper-padding(110px,110px);
+
     width: 1220px;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;

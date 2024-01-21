@@ -13,7 +13,6 @@
   }
 }
 
-
 .additional-products__title {
   font-family: $secondary-font;
   color: #000000;
@@ -46,7 +45,6 @@
       top: 64%;
     }
   }
-
 
   @media (min-width: $tablet-width) {
     font-size: 36px;
@@ -91,6 +89,7 @@
 
 .additional-products__list {
   @include list-style-none;
+
   margin-bottom: 37px;
 
   @media (min-width: $tablet-width) {
@@ -160,7 +159,7 @@
     flex-basis: 44%;
     font-size: 16px;
     line-height: 20px;
-    justify-content: right;
+    justify-content: start;
     gap: 49px;
   }
 
@@ -168,6 +167,25 @@
     margin: 0;
     margin-right: 40px;
     justify-content: space-between;
+  }
+}
+
+.additional-products__content-left {
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    flex-basis: 80%;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.additional-products__content-right {
+  @media (min-width: $tablet-width) {
+    flex-basis: 20%;
+    margin-left: auto;
+    text-align: right;
   }
 }
 

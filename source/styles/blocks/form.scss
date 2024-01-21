@@ -54,8 +54,14 @@
   }
 }
 
-.form__fio {
+.form__fio,
+.form__radio,
+.form__contact-info,
+.form__checkbox {
   @include list-style-none;
+}
+
+.form__fio {
   padding-bottom: 24px;
 
   @media (min-width: $tablet-width) {
@@ -64,7 +70,6 @@
 }
 
 .form__radio {
-  @include list-style-none;
   padding-top: 21px;
   padding-bottom: 18px;
 
@@ -75,7 +80,6 @@
 }
 
 .form__contact-info {
-  @include list-style-none;
   padding-top: 27px;
   padding-bottom: 24px;
 
@@ -89,12 +93,7 @@
   }
 }
 
-.form__comments {
-  @include list-style-none;
-}
-
 .form__checkbox {
-  @include list-style-none;
   padding-bottom: 34px;
 
   @media (min-width: $tablet-width) {

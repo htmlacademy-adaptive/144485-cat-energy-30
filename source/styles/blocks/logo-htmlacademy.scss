@@ -5,6 +5,17 @@
   color: #444444;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    .logo-htmlacademy__image {
+      fill: $bg-color-main;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     justify-content: end;
     gap: 23px;
@@ -23,15 +34,4 @@
 .logo-htmlacademy__image {
   fill: #666666;
   transition: 0.3s;
-}
-
-.logo-htmlacademy:hover,
-.logo-htmlacademy:focus {
-  .logo-htmlacademy__image {
-    fill: $bg-color-main;
-  }
-}
-
-.logo-htmlacademy:active {
-  opacity: 0.3;
 }

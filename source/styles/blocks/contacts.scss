@@ -55,13 +55,12 @@
   font-style: normal;
   text-align: left;
 
-
   @media (min-width: $tablet-width) {
     font-size: 16px;
     width: 157px;
     text-align: right;
 
-    & span {
+    .contacts__address-span {
       display: block;
       margin-top: 19px;
     }
