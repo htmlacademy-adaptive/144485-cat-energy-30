@@ -1,1 +1,13 @@
-/* stylelint-disable-next-line no-empty-source */
+.main-catalog {
+  padding-top: 27px;
+  border-top: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    padding-top: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+  }
+}

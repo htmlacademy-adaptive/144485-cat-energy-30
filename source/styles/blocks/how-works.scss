@@ -1,3 +1,19 @@
+.how-works {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 28px;
+    padding-bottom: 56px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 47px;
+    padding-bottom: 69px;
+    border-bottom: none;
+  }
+}
+
 .how-works__title {
   color: #000000;
   font-family: $secondary-font;
@@ -5,12 +21,123 @@
   font-weight: 400;
   line-height: 40px;
   margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .how-works__list {
   @include list-style-none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 87px 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 78px;
+  }
+}
+
+.how-works__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.how-works__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    min-width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    background-color: $bg-color-main;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+  }
+
+  &--functional-nutrition {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-how-work1");
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-how-work2");
+    }
+  }
+
+  &--replace-doses {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-how-work3");
+    }
+  }
+
+  &--changes-better {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#icon-how-work4");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    min-height: 230px;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      min-width: 80px;
+      height: 80px;
+      margin-bottom: 31px;
+    }
+
+    &::after {
+      position: absolute;
+      counter-increment: count-list;
+      content: counter(count-list);
+      top: -37px;
+      left: 116px;
+      color: #f2f2f2;
+      text-align: center;
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      line-height: 280px;
+      z-index: -1;
+    }
+  }
 }
 
 .how-works__description {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.how-works__br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

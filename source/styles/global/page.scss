@@ -1,9 +1,8 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее*/
-html {
+.page {
   height: 100%;
 }
 
-body {
+.page__body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -15,8 +14,9 @@ body {
   line-height: 18px;
   background-color: #ffffff;
   margin: 0;
+  counter-reset: count-list;
 }
 
-main {
+.page__main {
   flex-grow: 1;
 }

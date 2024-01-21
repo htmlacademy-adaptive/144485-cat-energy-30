@@ -1,17 +1,37 @@
-.logo-htmlacademy__title {
-  font-size: 16px;
-  line-height: 20px;
+.logo-htmlacademy {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #444444;
+  text-decoration: none;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    mask-image: url("../../images/icons/stack.svg#icon-html-academy");
-    background-color: #666666;
+  &:hover,
+  &:focus {
+    .logo-htmlacademy__image {
+      fill: $bg-color-main;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: end;
+    gap: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
   }
 }
 
+.logo-htmlacademy__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.logo-htmlacademy__image {
+  fill: #666666;
+  transition: 0.3s;
+}

@@ -2,30 +2,90 @@
   font-family: $secondary-font;
   color: #ffffff;
   text-align: center;
-  display: inline-block;
+  display: block;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  padding: 14px 10px;
+  padding: 10px 10px;
   text-decoration: none;
   border: none;
   box-sizing: border-box;
   cursor: pointer;
 
   &--main {
-    background-color: $bg-color-green;
+    background-color: $bg-color-main;
+
+    &:hover,
+    :focus {
+      background-color: $bg-color-main-hover;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+      background-color: $bg-color-main-hover;
+    }
   }
 
   &--see-more {
     color: $base-color-text;
     background: #f2f2f2;
     padding: 10px 10px;
+
+    &:hover,
+    :focus {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+    }
   }
 
   &--info {
+    display: flex;
+    align-items: center;
     color: #000000;
     font-size: 16px;
     line-height: 16px;
     padding: 0;
+
+    &::after {
+      content: "";
+      width: 32px;
+      height: 10px;
+      margin-left: 18px;
+      background-image: url("../../images/icons/stack.svg#icon-arrow");
+      background-repeat: no-repeat;
+      background-size: 32px;
+      background-position-x: -8px;
+      transition: 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-position-x: -2px;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::after {
+        margin-left: 29px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: normal;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
   }
 }

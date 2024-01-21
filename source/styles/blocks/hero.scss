@@ -1,20 +1,161 @@
 .hero {
   font-family: $secondary-font;
   color: #ffffff;
-  background-color: $bg-color-green;
+  text-align: center;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    text-align: left;
+    min-height: revert;
+    padding-left: 120px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    min-height: 608px;
+    padding-left: 159px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 694px;
+      left: 50%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+        image-set(url("../../images/index-background-desktop@1x.jpg") type("image/jpeg") 1x,
+        url("../../images/index-background-desktop@2x.jpg") type("image/jpeg") 2x,
+        url("../../images/index-background-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/index-background-desktop@2x.webp") type("image/webp") 2x);
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      background-position: center left;
+      z-index: -2;
+    }
+  }
+}
+
+.hero__content {
+  background-image:
+    linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+    image-set(url("../../images/index-background-mobile@1x.jpg") type("image/jpeg") 1x,
+    url("../../images/index-background-mobile@2x.jpg") type("image/jpeg") 2x,
+    url("../../images/index-background-mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/index-background-mobile@2x.webp") type("image/webp") 2x);
+  background-repeat: repeat, no-repeat;
+  background-position: center center;
+  background-size: auto, cover;
+  min-height: 264px;
+  padding-top: 28px;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    background: none;
+    min-height: revert;
+    padding-top: 61px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 420px;
+    padding-top: 110px;
+  }
 }
 
 .hero__title {
+  position: relative;
   font-weight: 400;
-  text-align: center;
   font-size: 36px;
   line-height: 36px;
   margin: 0;
+  margin-bottom: 24px;
+  padding: 0 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 40px;
+    padding: 0;
+    width: 420px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 36px;
+  }
 }
 
 .hero__description {
+  position: relative;
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+  padding: 0 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.hero__image {
+  margin-top: -136px;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    position: relative;
+    top: 52px;
+    left: -90px;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    order: 0;
+    position: relative;
+    left: -52px;
+    top: 25px;
+  }
+}
+
+.hero__button-wrapper {
+  width: auto;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.hero__button {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    width: 244px;
+    padding: 17px 10px;
+    font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    grid-row: 2;
+    margin: 0;
+    margin-top: 4px;
+  }
 }
