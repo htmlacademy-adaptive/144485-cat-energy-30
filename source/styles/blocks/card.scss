@@ -96,6 +96,15 @@
 .card__image {
   flex: 0 0 50%;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   img {
     display: block;
     margin: 0 auto;
@@ -133,6 +142,7 @@
   margin: 0;
   margin-bottom: 17px;
   max-width: 99px;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -176,6 +186,19 @@
     &:last-child {
       padding-bottom: 8px;
     }
+  }
+}
+
+.card__link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

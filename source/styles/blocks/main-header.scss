@@ -77,15 +77,6 @@
   }
 }
 
-.main-header__logo-title {
-  @media (min-width: $desktop-width) {
-    .logo-title__image {
-      width: 118px;
-      height: 21px;
-    }
-  }
-}
-
 .main-header__navigation {
   grid-column: 1/-1;
   display: none;
