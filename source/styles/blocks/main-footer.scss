@@ -29,30 +29,31 @@
   padding-top: 20px;
   padding-bottom: 19px;
 
-  .logo-title {
-    display: block;
-    max-width: 128px;
-    margin: 0 auto;
-
-    @media (min-width: $tablet-width) {
-      margin: 0;
-    }
-  }
-
-  .social-list {
-    margin: 0 auto;
-  }
-
-  .logo-htmlacademy {
-    margin: 0 auto;
-
-    @media (min-width: $tablet-width) {
-      margin: 0 0 0 auto;
-    }
-  }
-
   @media (min-width: $tablet-width) {
     padding: 0;
+  }
+}
+
+.main-footer__logo-title {
+  display: block;
+  max-width: 128px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-footer__social {
+  width: 154px;
+  margin: 0 auto;
+}
+
+.main-footer__logo-htmlacademy {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 auto;
   }
 }
 
